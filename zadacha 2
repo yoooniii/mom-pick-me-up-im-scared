@@ -1,0 +1,35 @@
+Scanner inp=new Scanner(System.in);
+		int n=inp.nextInt();// broi tovari
+		double sum=0;
+		double p=1;
+		double p1=1;
+		double p2=1;
+		int m=0;//mikrobus
+		int k=0;//kamion
+		int v=0;//vlak
+		double s=0;//средната цена
+			for (int i=0; i<n;i++) {
+				int tonove=inp.nextInt();
+				sum+=tonove;
+				if (tonove<=3) { 
+				m+=tonove;	
+}
+				else 	if (tonove>3 && tonove<=11) {
+					k+=tonove;	
+				}
+				else  {
+					v+=tonove;
+				}
+				s=(m*200+k*175+v*120)/sum;
+				p=(m/sum)*100;	
+				p1=(k/sum)*100;
+			    p2=(v/sum)*100;	
+}
+			System.out.println("procenti na mikrobus "+p+"%");
+			System.out.println("procenti na kamion "+p1+"%");
+			System.out.println("procenti na vlak "+p2+"%");
+			System.out.println("sumata e "+sum);
+			System.out.println("sredna cena "+s);
+			
+}
+	}
