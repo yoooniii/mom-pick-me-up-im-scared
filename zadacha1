@@ -1,0 +1,19 @@
+Scanner inp=new Scanner(System.in);
+		int n=inp.nextInt();
+        int sumachetni=0;
+        int sumanechetni=0;
+        int razlika;
+        for (int i=0; i<n; i++) {
+        	int poziciq=inp.nextInt();
+        	if (i%2==0){
+        		sumachetni=sumachetni+poziciq; 
+        		}
+        	else {
+        		sumanechetni=sumanechetni+poziciq;	
+        		}
+        } 
+        razlika=sumachetni-sumanechetni;
+        if (sumachetni==sumanechetni)
+        System.out.println("yes: "+sumachetni);
+        else 
+        	 System.out.println("no: "+razlika);
