@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class matrica {
+	
+/*public static void kakSePrintiraKatoPravougulnikVeDeiba(String[] args) {
+	
+		Scanner inp=new Scanner(System.in);
+		int rows = inp.nextInt();
+		int cols = inp.nextInt();
+		int[][] matrix = new int[rows][cols];
+
+		for (int row = 0; row < rows; row++) {
+
+		       for (int col = 0; col < cols; col++) {
+		    	   matrix[row][col] = inp.nextInt();		         
+		         System.out.print(matrix[row][col]+" ");
+		       }
+		       System.out.println();
+		}
+}*/
+
+	public static void main(String[] args) {
+//minmax
+		Scanner inp=new Scanner(System.in);
+		int rows = inp.nextInt();
+		int cols = inp.nextInt();
+		int[][] matrix = new int[rows][cols];
+int min=matrix[0][0]; //tva tuka ne bachka neshto
+int max=matrix[0][0];
+
+		for (int row = 0; row < rows; row++) {
+
+		       for (int col = 0; col < cols; col++) {
+		    	   matrix[row][col] = inp.nextInt();	
+		    	   if (matrix[row][col]<min)min=matrix[row][col];
+		    	   if (matrix[row][col]>max)max=matrix[row][col];
+		       }
+		      
+	}
+		 System.out.println("min "+min+" max "+max);
+	}
+}
